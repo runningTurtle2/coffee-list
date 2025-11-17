@@ -8,7 +8,7 @@ const Sidebar = () => {
         <input
           type="text"
           placeholder="Find beans..."
-          className="flex-grow text-sm outline-none bg-transparent"
+          className="grow text-sm outline-none bg-transparent"
         />
         <IoSearch className="text-gray-500 text-lg" />
       </div>
