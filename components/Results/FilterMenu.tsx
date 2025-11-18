@@ -1,8 +1,10 @@
 import { IoSearch } from "react-icons/io5";
+import React from 'react'
 
-const Sidebar = () => {
+export default function FilterMenu() {
   return (
-    <aside className="w-[260px] h-screen border-r border-gray-300 bg-gray-50 p-6 flex flex-col gap-6">
+    <aside className="w-[260px] h-screen border-r rounded-xl border-gray-300 bg-gray-50 p-6 flex flex-col gap-6">
+      
       {/* Search */}
       <div className="bg-white flex items-center rounded-full px-4 py-2 shadow-sm">
         <input
@@ -21,6 +23,4 @@ const Sidebar = () => {
       </nav>
     </aside>
   );
-};
-
-export default Sidebar;
+}

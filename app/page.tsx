@@ -1,16 +1,17 @@
-import CoffeeCard from '../components/CoffeeCard'
+import CoffeeCard from '../components/Results/CoffeeCard';
+import FilterMenu from '@/components/Results/FilterMenu';
 
 export default function Home() {
   return (
-    <div>
-      <h2 className="text-2xl font-bold mb-4">Welcome to the Coffee Bean Finder</h2>
-      <p className="text-gray-600">Use the search or explore your favorite beans.</p>
-
-      <div>
-        <CoffeeCard />
+    <div className='flex gap-16 py-6'>
+      <FilterMenu />
+      
+      <div className='flex-1'>
+        <h2 className='mb-4 text-xl'>Coffee Results</h2>
+        <div className='grid gap-4'>
+          <CoffeeCard />
+        </div>
       </div>
     </div>
-
-    
   );
 }
