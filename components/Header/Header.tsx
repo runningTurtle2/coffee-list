@@ -4,7 +4,7 @@ import React from 'react'
 export default function Header() {
   return (
     <div className="flex items-center justify-between px-8 py-4 w-full">
-      <h1 className="text-xl font-semibold flex gap-3">
+      <h1 className="text-xl font-semibold flex items-center gap-3">
         <FiCoffee /> <span>Coffee List</span>
       </h1>
 
