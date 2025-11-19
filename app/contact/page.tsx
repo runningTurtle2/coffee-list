@@ -20,7 +20,7 @@ export default function ContactPage() {
 
       {/* Header*/}
       <header className='text-center mb-10'>
-        <h1 className='text-3xl'>Contact Us</h1>
+        <h1 className='text-3xl'>Give Feedback</h1>
       </header>
 
       <form onSubmit={submitForm} className='space-y-10'>
@@ -75,7 +75,7 @@ export default function ContactPage() {
           {/* Submit Button*/}
           <button
             type='submit'
-            className='bg-blue-100 py-2 px-4 rounded hover:cursor-pointer'>Submit
+            className='bg-neutral-700 text-white py-3 px-8 rounded-2xl  hover:cursor-pointer'>Submit
           </button>
 
         </section>
