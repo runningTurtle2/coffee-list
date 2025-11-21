@@ -26,18 +26,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <header className="w-full border-b border-gray-300 bg-white">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+        <header className="border-b border-gray-300 bg-white">
           <Header />
         </header>
 
-        <main className="w-full">
+        <main>
           <div className="max-w-[1400px] mx-auto px-6">
             {children}
           </div>
         </main>
         
-        <footer className="w-full border-t border-gray-300 bg-white mt-auto">
+        <footer className="border-t border-gray-300 bg-white mt-auto">
           <Footer />
         </footer>
       </body>

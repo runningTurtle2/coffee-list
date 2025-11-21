@@ -3,16 +3,16 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <div className="flex items-center justify-between px-8 py-4 w-full">
-      <h1 className="text-xl font-semibold flex items-center gap-3">
-        <FiCoffee /> <span>Coffee List</span>
-      </h1>
+    <nav className="relative flex items-center justify-between p-4">
+      <div className="text-2xl">
+        <a href="/"><FiCoffee /></a>
+      </div>
 
-      <nav className="space-x-6 text-md">
-        <a href="/" className="hover:underline">Home</a>
-        <a href="/about" className="hover:underline">About</a>
-        <a href="/contact" className="hover:underline">Feedback</a>
-      </nav>
-    </div>
+      <ul className="flex space-x-6">
+        <li><a href="/" className="hover:underline">Home</a></li>
+        <li><a href="/about" className="hover:underline">About</a></li>
+        <li><a href="/contact" className="hover:underline">Feedback</a></li>
+      </ul>
+    </nav>
   );
 }

@@ -3,7 +3,7 @@ import { FiCoffee, FiGithub } from "react-icons/fi";
 
 export default function Footer() {
   return (
-    <div className='flex flex-row h-72 justify-between items-center gap-x-6 p-6 w-full'>
+    <div className='flex flex-row min-h-36 h-full justify-between items-center gap-x-6 p-6 w-full'>
       
       <h1 className='text-4xl gap-2'><FiCoffee/> </h1>
 
