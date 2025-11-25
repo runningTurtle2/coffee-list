@@ -1,7 +1,11 @@
 import CoffeeCard from '../components/Results/CoffeeCard';
 import FilterMenu from '@/components/Results/FilterMenu';
+import { coffees } from '@/lib/data/data';
 
 export default function Home() {
+  
+
+  
   return (
     <main className='p-4 w-full max-w-7xl mx-auto'>
 
@@ -15,11 +19,11 @@ export default function Home() {
         </aside>
 
         <article className='flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-6 gap-10'>
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
+          
+          {coffees.map(c => (
+            <CoffeeCard key={c.id} coffee={c}/>
+          ))}
+          
         </article>
 
       </div>
