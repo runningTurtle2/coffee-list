@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function FilterMenu() {
   return (
-    <aside className="w-[260px] h-screen border-r rounded-xl border-gray-300 bg-gray-50 p-6 flex flex-col gap-6">
+    <aside className="h-full max-w-55 border-r rounded-xl border-gray-300 bg-gray-50 p-6 flex flex-col gap-6">
       
       {/* Search */}
       <div className="bg-white flex items-center rounded-full px-4 py-2 shadow-sm">

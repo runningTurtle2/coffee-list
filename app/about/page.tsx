@@ -9,7 +9,6 @@ export default function AboutPage() {
         <h1 className="text-4xl font-semibold">What About It</h1>
       </header>
 
-
       <article className='grid grid-cols-1 sm:grid-cols-2 gap-12'>
         <div className='text-2xl grid grid-cols-1 justify-center items-center p-4'>
           <p>
@@ -36,7 +35,6 @@ export default function AboutPage() {
             />
         </div>
       </article>
-
       
     </main>
   )
