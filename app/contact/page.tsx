@@ -34,7 +34,7 @@ export default function ContactPage() {
 
       {/* Header*/}
       <header className='text-center mb-10'>
-        <h1 className='text-3xl'>Help Us Make it Better</h1>
+        <h1 className='text-3xl font-bold'>Help Us Make it Better</h1>
       </header>
 
       <form onSubmit={submitForm} className='space-y-10'>

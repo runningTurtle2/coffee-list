@@ -37,7 +37,7 @@ export default function RootLayout({
           </div>
         </main>
         
-        <footer className="border-t border-gray-300 bg-white mt-auto">
+        <footer className="border-t border-gray-300 bg-white ">
           <Footer />
         </footer>
       </body>
