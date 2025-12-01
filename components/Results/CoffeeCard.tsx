@@ -1,10 +1,17 @@
+'use client'
 import Image from "next/image"
 import { Coffee } from "@/types";
+import { useState } from "react";
 
 interface Props {
   coffee: Coffee;
 }
 export default function CoffeeCard({coffee}: Props) {
+  const [isOpen, setIsOpen] = useState(false);
+  function handleOpen(){
+    console.log('Key: ',coffee.id )
+  }
+
   return (
     <div className='max-w-sm w-full rounded shadow-lg bg-gray-50 flex flex-col'>
       {/* Image */}
@@ -49,10 +56,18 @@ export default function CoffeeCard({coffee}: Props) {
             </div>
 
           <div className="pt-4">
-            <button className='w-full py-2 rounded-lg text-xl bg-yellow-600 text-white font-semibold shadow-md transform transition duration-200 hover:scale-105'>View More</button>
+            <button onClick={handleOpen} className='w-full py-2 rounded-lg text-xl bg-yellow-600 text-white font-semibold shadow-md transform transition duration-200 hover:scale-105'>View More</button>
           </div>
 
         </div>
+
+      {/** This is enabled if the boolean state is enabled */}
+      <div>
+
+      </div>
+
+
+
     </div>
   );
 }
