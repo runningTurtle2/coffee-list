@@ -1,13 +1,32 @@
 'use client'
-import React, { useState, } from 'react'
+import { useState, } from 'react'
 import { useRouter } from "next/navigation";
+import { createClient } from '@/utils/supabase/server'
+import { cookies } from "next/headers";
 
-export default function ContactPage() {
+export default async function ContactPage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [comments, setComments] = useState('');
   const router = useRouter();
+  const cookieStore = await cookies()
+  const supabase = createClient(cookieStore)
+  
+
+
+  
+  async function testing() {
+    console.log('testing clicked')
+    // const { data, error } = await supabase
+    //   .from('feedback')
+    //   .insert([
+    //     { name: 'testing', subject: 'otherValue' },
+    //   ]).select()
+    
+  }
+
+
   let emptyValue = '';
 
   const submitForm = (e: any) => {
@@ -103,6 +122,7 @@ export default function ContactPage() {
           {/* Submit Button*/}
           <button
             type='submit'
+            onClick={testing}
             className='bg-neutral-700 text-white py-3 px-8 rounded-2xl  hover:cursor-pointer'>Submit
           </button>
 
