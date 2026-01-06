@@ -1,17 +1,14 @@
 'use client'
 import { useState, } from 'react'
 import { useRouter } from "next/navigation";
-import { createClient } from '@/utils/supabase/server'
-import { cookies } from "next/headers";
 
-export default async function ContactPage() {
+
+export default function ContactPage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [comments, setComments] = useState('');
   const router = useRouter();
-  const cookieStore = await cookies()
-  const supabase = createClient(cookieStore)
   
 
 
