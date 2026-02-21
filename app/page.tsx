@@ -10,11 +10,8 @@ export default async function Home() {
 
 
   return (
-    <main className='p-4 w-full max-w-7xl mx-auto'>
+    <div className='flex-1 p-4 w-full max-w-7xl mx-auto px-6'>
 
-      <header className=' mb-10 text-center '>
-        <h2 className='text-4xl font-bold'>Coffee List</h2>
-      </header>
       <div className="flex gap-8">
 
         {/* <aside className='w-64 shrink-0 hidden sm:block'>
@@ -31,6 +28,6 @@ export default async function Home() {
 
       </div>
 
-    </main>
+    </div>
   );
 }
