@@ -2,14 +2,25 @@
 import Image from "next/image"
 import { Coffee } from "@/types";
 import { useState } from "react";
+import Modal from "../ui/Modal";
 
 interface Props {
   coffee: Coffee;
 }
 export default function CoffeeCard({coffee}: Props) {
   const [isOpen, setIsOpen] = useState(false);
+  
   function handleOpen(){
     console.log('Key: ',coffee.id )
+
+    if(isOpen){
+      console.log('Is opened')
+    }else {
+      console.log('Is Closed')
+    }
+    setIsOpen(true);
+
+    console.log(isOpen)
   }
 
   return (
@@ -59,6 +70,9 @@ export default function CoffeeCard({coffee}: Props) {
             <button onClick={handleOpen} className='w-full py-2 rounded-lg text-xl bg-yellow-600 text-white font-semibold shadow-md transform transition duration-200 hover:scale-105'>View More</button>
           </div>
 
+            <Modal open={isOpen} onClose={() =>setIsOpen(false)}>
+              Modal is opened
+            </Modal>
         </div>
 
       {/** This is enabled if the boolean state is enabled */}
