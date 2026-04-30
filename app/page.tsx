@@ -6,9 +6,6 @@ import { coffees } from '@/lib/data/data';
 export default async function Home() {
   
 
-          
-
-
   return (
     <div className='flex-1 p-4 w-full max-w-7xl mx-auto px-6'>
 
