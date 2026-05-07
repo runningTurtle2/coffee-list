@@ -71,7 +71,19 @@ export default function CoffeeCard({coffee}: Props) {
           </div>
 
             <Modal open={isOpen} onClose={() =>setIsOpen(false)}>
-              Modal is opened
+              {/** Wrapper */}
+              <div className="max-w-sm w-full rounded shadow-lg bg-gray-50 flex flex-col">
+                <div className="w-full h-60 relative">
+                  {coffee.uri && (
+                    <Image
+                      src={coffee.uri}
+                      alt={coffee.name}
+                      fill
+                      className="object-cover rounded-t"
+                    />
+                  )}
+                </div>
+              </div>
             </Modal>
         </div>
 

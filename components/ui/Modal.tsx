@@ -7,7 +7,11 @@ const Modal_Styles: React.CSSProperties = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    padding: '50px',
+    padding: '12px',
+    display: 'flex-column',
+    width: '500px',
+    height: '500px',
+    background: '#F9FAFB',
     zIndex: 1000
 }
 const Overlay_Styles: React.CSSProperties = {
@@ -25,7 +29,9 @@ export default function Modal({open, children, onClose}:any) {
     <>
         <div style={Overlay_Styles} />
         <div style={Modal_Styles}>
-            <button onClick={onClose}>Close Modal</button>
+            <div className='flex-1 justi'>
+                <button onClick={onClose} className='p-4 rounded bg-green-300'>Close Modal</button>
+            </div>
         {children}
         </div>
     </>,
